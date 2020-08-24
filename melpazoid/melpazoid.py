@@ -324,7 +324,7 @@ def _reqs_from_pkg_el(pkg_el: TextIO) -> str:
     """
     reqs = pkg_el.read()
     reqs = ' '.join(_tokenize_expression(reqs))
-    reqs = reqs[reqs.find('( (') :]
+    reqs = reqs[reqs.find('( ('):]
     reqs = reqs[: reqs.find(') )') + 3]
     return reqs
 
